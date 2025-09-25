@@ -129,7 +129,7 @@ body {
 наведении */
 }
 /* ===== ОПЫТ РАБОТЫ ===== */
-.experience-section {
+.experience-section, .news-section {
  margin-top: 50px; /* Отступ сверху */
 }
 .section-title {
@@ -139,7 +139,7 @@ body {
  margin-bottom: 30px; /* Отступ снизу */
  font-weight: 300; /* Легкое начертание шрифта */
 }
-.experience-card {
+.experience-card, .news-card {
  background: white; /* Белый фон карточки */
  padding: 25px; /* Внутренние отступы */
  margin: 20px 0; /* Вертикальные отступы */
@@ -148,19 +148,22 @@ body {
  border-left: 4px solid #667eea; /* Синяя полоса слева */
  transition: transform 0.3s ease; /* Плавная анимация трансформации */
 }
-.experience-card:hover {
+.experience-card:hover, .news-card:hover {
  transform: translateX(5px); /* Сдвиг вправо при наведении */
 }
-.experience-title {
+.experience-title, .news-title {
  font-size: 20px; /* Размер шрифта заголовка опыта */
  color: #2c3e50; /* Темно-синий цвет текста */
  margin: 0 0 10px 0; /* Отступ снизу */
  font-weight: 600; /* Жирный шрифт */
 }
-.experience-desc {
+.experience-desc, .news-desc {
  color: #7f8c8d; /* Серый цвет текста */
  line-height: 1.6; /* Межстрочный интервал */
  margin: 0; /* Убираем отступы */
+}
+.news-time {
+    color: #7f8c8d;
 }
 /* ===== ФУТЕР ===== */
 .footer {
