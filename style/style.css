@@ -61,13 +61,14 @@ body {
  padding: 40px; /* Внутренние отступы контента */
  max-width: 900px; /* Максимальная ширина контента */
  margin: 0 auto; /* Центрирование контента */
+
 }
 /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
 .profile-header {
  text-align: center; /* Выравнивание по центру */
  margin-bottom: 40px; /* Отступ снизу */
 }
-.profile-title {
+.profile-title, .goods-title, .contacts-title {
  font-size: 32px; /* Размер шрифта заголовка */
  color: #2c3e50; /* Темно-синий цвет текста */
  margin-bottom: 10px; /* Отступ снизу */
@@ -112,6 +113,8 @@ body {
  gap: 15px; /* Расстояние между навыками */
  margin: 30px 0; /* Вертикальные отступы */
 }
+
+.button-tag,
 .skill-tag {
  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Голубой
 градиентный фон */
@@ -123,14 +126,57 @@ body {
  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3); /* Тень с голубым оттенком */
  transition: all 0.3s ease; /* Плавные анимации при изменении */
 }
+.button-tag {
+     background: linear-gradient(135deg, #677ae5 0%, #7451ab 100%);
+     border-width: 0;
+     display: flex;
+     justify-self: center;
+     /* padding: 0px 10px; */
+     margin: 20px 0px;
+     padding: 15px 40px;
+
+}
+
 .skill-tag:hover {
  transform: translateY(-3px); /* Поднятие элемента при наведении */
  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при
 наведении */
 }
 /* ===== ОПЫТ РАБОТЫ ===== */
-.experience-section, .news-section {
+.experience-section, .news-section, .goods-section, .contacts-section {
  margin-top: 50px; /* Отступ сверху */
+}
+.contacts-section {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.contacts-text {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+#contacts-text {
+    padding: 40px 100px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.goods-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.goods-images {
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin: 0 20px;
 }
 .section-title {
  font-size: 28px; /* Размер шрифта заголовка секции */
@@ -138,6 +184,10 @@ body {
  text-align: center; /* Выравнивание по центру */
  margin-bottom: 30px; /* Отступ снизу */
  font-weight: 300; /* Легкое начертание шрифта */
+}
+.goods-cards {
+    display: flex;
+    gap: 15px;
 }
 .experience-card, .news-card {
  background: white; /* Белый фон карточки */
@@ -148,7 +198,36 @@ body {
  border-left: 4px solid #667eea; /* Синяя полоса слева */
  transition: transform 0.3s ease; /* Плавная анимация трансформации */
 }
-.experience-card:hover, .news-card:hover {
+.goods-card {
+    background: white; /* Белый фон карточки */
+ padding: 25px; /* Внутренние отступы */
+ margin: 20px 0; /* Вертикальные отступы */
+ border-radius: 12px; /* Скругленные углы */
+ box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Легкая тень */
+ transition: transform 0.3s ease; /* Плавная анимация трансформации */
+ flex-direction: column;
+justify-content: center;
+align-items: center;
+ display: flex;
+ 
+ align-items: center;
+ gap: 50px;
+}
+.goods-card-text {
+    /* justify-self: center;
+    align-self: center; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.goods-price {
+    color: #e74c3c;
+}
+.experience-card:hover, .news-card:hover, .goods-card {
  transform: translateX(5px); /* Сдвиг вправо при наведении */
 }
 .experience-title, .news-title {
