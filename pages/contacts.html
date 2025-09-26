@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Семестровая работа</title>
 </head>
 <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="./news.html">Новости</a></li>
-            <li><a href="./practices.html">Практики</a></li>
-            <li><a href="./goods.html">Товары</a></li>
-            <li><a href="./contacts.html">Контакты</a></li>
-
-        </ul>
-    </div>
-    <div>
-        <div>
-            <p>Адрес электронной почты: astafev@mirea.ru</p>
-            <p>Адрес: г. Москва, ул. Пушкина, д. Колотушкина</p>
-            <button>Позвоните мне</button>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link"
+                href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link"
+                href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link"
+                href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link"
+                href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link"
+                href="contacts.html">Контакты</a></li>
+            </ul>
+            
         </div>
+        <div class="content">
+            <section class="contacts-section">
+                <div class="section-title">Контакты</div>
+                <div class="contacts-text">
+                    <p id="contacts-text">Адрес электронной почты: astafev@mirea.ru</p>
+                    <p id="contacts-text">Адрес г.Москва, ул. Пушкина, д. Колотушкина</p>
+                    
+                </div>
+                
+            </section>
+            <button class="button-tag">Позвоните мне</button>
+            
+        </div>
+        <div class="footer">Футер</div>
+    
     </div>
-    <div id="footer">Футер</div>
+    
 </body>
 </html>
