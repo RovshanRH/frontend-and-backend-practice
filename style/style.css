@@ -148,6 +148,7 @@ main.content {
      /* padding: 0px 10px; */
      margin: 20px 0px;
      padding: 15px 40px;
+     grid-column: 1 / -1;
 
 }
 
@@ -164,6 +165,7 @@ main.content {
 
 
 .contacts-section {
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -176,7 +178,7 @@ main.content {
     /* align-items: center; */
     justify-content: center;
 }
-#contacts-text {
+#contacts-info {
     padding: 40px 100px;
     background-color: #e9ecef;
     border-radius: 10px;
@@ -203,9 +205,9 @@ main.content {
  font-weight: 300; /* Легкое начертание шрифта */
 }
 
-.experience-grid {
+.experience-grid, .contacts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fir, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -289,7 +291,23 @@ align-items: center;
     .experience-grid {
         grid-template-columns: 1fr;
     }
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
     .main.content {
         padding: 20px;
+    }
+    .contacts-text {
+        padding: 20px;
+    }
+    
+    #contacts-info {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .button-tag {
+        width: 90%;
+        margin: 20px auto;
     }
 }
