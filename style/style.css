@@ -196,6 +196,9 @@ main.content {
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     margin: 0 20px;
+    width: 250px;
+    height: 450px;
+    object-fit: cover; 
 }
 .section-title {
  font-size: 28px; /* Размер шрифта заголовка секции */
@@ -205,15 +208,24 @@ main.content {
  font-weight: 300; /* Легкое начертание шрифта */
 }
 
-.experience-grid, .contacts-grid {
+.experience-grid, .contacts-grid, .goods-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
+.goods-grid {
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas: "goods-section", "goods-cards", "goods-card";
+}
+
 .goods-cards {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    grid-area: "goods-cards";
 }
 .experience-card, .news-card {
  background: white; /* Белый фон карточки */
@@ -237,7 +249,11 @@ align-items: center;
  display: flex;
  
  align-items: center;
- gap: 50px;
+ gap: 20px;
+ grid-area: "goods-card";
+}
+.goods-card:hover {
+    transform: translateY(-5px); /* Лучший эффект при наведении */
 }
 .goods-card-text {
     /* justify-self: center;
@@ -309,5 +325,20 @@ align-items: center;
     .button-tag {
         width: 90%;
         margin: 20px auto;
+    }
+    .goods-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .goods-card {
+        width: 90%;
+        max-width: none;
+    }
+    
+    .goods-images {
+        width: 200px;
+        height: 350px;
     }
 }
