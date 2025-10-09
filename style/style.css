@@ -15,6 +15,9 @@ body {
     background: white; /* Белый фон для основного содержимого */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
     box-shadow: 0 0 30px rgba(0,0,0,0.1); /* Легкая тень вокруг всего контента */
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "header" "nav" "main" "footer";
 }
 /* ===== ШАПКА ===== */
 .header {
@@ -26,11 +29,13 @@ body {
     font-size: 28px; /* Размер шрифта */
     font-weight: 300; /* Легкое начертание шрифта */
     letter-spacing: 2px; /* Расстояние между буквами */
+    grid-area: header;
 }
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
  background: #2c3e50; /* Темно-синий фон навигации */
  padding: 20px 0; /* Вертикальные отступы */
+ grid-area: nav;
 }
 .nav-list {
  list-style: none; /* Убираем маркеры списка */
@@ -57,10 +62,12 @@ body {
  transform: translateY(-2px); /* Легкое поднятие элемента при наведении */
 }
 /* ===== ОСНОВНОЙ КОНТЕНТ ===== */
-.content {
+main.content {
+
  padding: 40px; /* Внутренние отступы контента */
  max-width: 900px; /* Максимальная ширина контента */
  margin: 0 auto; /* Центрирование контента */
+ grid-area: main;
 
 }
 /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
@@ -114,6 +121,13 @@ body {
  margin: 30px 0; /* Вертикальные отступы */
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
 .button-tag,
 .skill-tag {
  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Голубой
@@ -134,6 +148,7 @@ body {
      /* padding: 0px 10px; */
      margin: 20px 0px;
      padding: 15px 40px;
+     grid-column: 1 / -1;
 
 }
 
@@ -146,7 +161,11 @@ body {
 .experience-section, .news-section, .goods-section, .contacts-section {
  margin-top: 50px; /* Отступ сверху */
 }
-.contacts-section {
+
+
+
+.contacts-section, .goods-section, .news-section {
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -159,7 +178,7 @@ body {
     /* align-items: center; */
     justify-content: center;
 }
-#contacts-text {
+#contacts-info {
     padding: 40px 100px;
     background-color: #e9ecef;
     border-radius: 10px;
@@ -177,6 +196,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     margin: 0 20px;
+    width: 250px;
+    height: 450px;
+    object-fit: cover; 
 }
 .section-title {
  font-size: 28px; /* Размер шрифта заголовка секции */
@@ -185,9 +207,25 @@ body {
  margin-bottom: 30px; /* Отступ снизу */
  font-weight: 300; /* Легкое начертание шрифта */
 }
+
+.experience-grid, .contacts-grid, .goods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.goods-grid {
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas: "goods-section", "goods-cards", "goods-card";
+}
+
 .goods-cards {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    grid-area: "goods-cards";
 }
 .experience-card, .news-card {
  background: white; /* Белый фон карточки */
@@ -211,7 +249,11 @@ align-items: center;
  display: flex;
  
  align-items: center;
- gap: 50px;
+ gap: 20px;
+ grid-area: "goods-card";
+}
+.goods-card:hover {
+    transform: translateY(-5px); /* Лучший эффект при наведении */
 }
 .goods-card-text {
     /* justify-self: center;
@@ -252,4 +294,51 @@ align-items: center;
  text-align: center; /* Выравнивание по центру */
  padding: 30px; /* Внутренние отступы */
  margin-top: 50px; /* Отступ сверху */
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+    .main.content {
+        padding: 20px;
+    }
+    .contacts-text {
+        padding: 20px;
+    }
+    
+    #contacts-info {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .button-tag {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .goods-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .goods-card {
+        width: 90%;
+        max-width: none;
+    }
+    
+    .goods-images {
+        width: 200px;
+        height: 350px;
+    }
 }
