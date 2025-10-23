@@ -5,43 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
 
-    <title>Семестровая работа</title>
+    <title>Новости</title>
 </head>
 <body>
-    <div class="page-container">
-        <header class="header"><h1>Хэдер</h1></header>
+    <div class="page">
+        <header class="header"><h1 class="header__title">Реальные новости</h1></header>
+
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link"
-                href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link"
-                href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link"
-                href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link"
-                href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link"
-                href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link"
+                href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link"
+                href="news.html">Новости</a>
+                </li>
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link"
+                href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link"
+                href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link"
+                href="contacts.html">Контакты</a>
+                </li>
             </ul>
 
         </nav>
         <main class="content">
             <section class="news-section">
-                <h2 class="section-title">Мой опыт работы</h2>
+                <h2 class="section__title">Новости</h2>
                     <article class="news-card">
-                        <h3 class="news-title">Новость 1</h3> 
-                        <p class="news-time">25.09.2025 9:38:20 Р.Р. Ходжакулыев</p>
-                        <p class="news-desk">Текст новости 1</p>
+                        <h3 class="news__title">Москва</h3> 
+                        <p class="news__time">16.10.2025 9:00:00 Gemma3</p>
+                        <p class="news__desk">Москвичам рассказали о поврежденных операторах дронов в Белгородском районе</p>
                     </article>
                     <article class="news-card">
-                        <h3 class="news-title">Новость 2</h3> 
-                        <p class="news-time">25.09.2025 9:38:20 Р.Р. Ходжакулыев</p>
-                        <p class="news-desk">Текст новости 2</p>
+                        <h3 class="news__title">Youtube</h3> 
+                        <p class="news__time">16.10.2025 3:00:00 Gemma3</p>
+                        <p class="news__desk">Автобус с двумя погибшими сбоит YouTube в Приамурье</p>
                     </article>
                     <article class="news-card">
-                        <h3 class="news-title">Новость 3</h3> 
-                        <p class="news-time">25.09.2025 9:38:20 Р.Р. Ходжакулыев</p>
-                        <p class="news-desk">Текст новости 3</p>
+                        <h3 class="news__title">Трамп</h3> 
+                        <p class="news__time">16.10.2025 00:00:00 Gemma3</p>
+                        <p class="news__desk">Трамп заявил, что Россия перестанет покупать нефть, пока ребенок на электровелосипеде столкнулся с мужчиной из Китая</p>
                     </article>
                     
         
@@ -49,7 +60,9 @@
         
         
         </main>
-        <footer class="footer"><p>Футер</p></footer>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Все права защищены. Контактная информаци</p>
+        </footer>
 
     </div>
     

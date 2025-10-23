@@ -1,0 +1,20 @@
+:root {
+ --color-main: rgb(255, 215, 0, 0.7);
+ --color-accent: rgb(255, 160, 122);
+ --color-accent-20: rgb(255, 215, 0, 0.3);
+ --color-light: #ecf0f1;
+ --color-dark: #E9967A;
+ --color-dark-80: rgb(233, 150, 122, 0.8)
+ --color-text: #2c3e50;
+ --color-grey: rgba(220, 220, 220, 0.1);;
+ --color-white: #ffffff;
+ --color-white--00: #ffffff00;
+
+
+ --shadow: 0 2px 5px rgba(0,0,0,0.1);
+  --radius: 8px;
+
+ --space-sm: 10px;
+ --space-md: 20px;
+ --space-lg: 30px;
+}
