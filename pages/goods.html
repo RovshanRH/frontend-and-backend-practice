@@ -39,35 +39,99 @@
                 <section class="goods-section">
                     <h1 class="section__title">Наши товары</h1>
                     <div class="goods__cards">
-                        <div class="goods__card">
-                            <img src="../images/goods_1.png" alt="товар 1" width="250" height="450" class="goods-images goods-images--first">
+                        <div class="goods__card" onclick="storeItem(this)">
+                            <img src="../images/goods_1.png" alt="товар 1" class="goods-images">
                             <div class="goods-card-text">
                                 <figcaption >Мыло хозяйственное</figcaption>
-                                <p class="goods__price"><b>72 рубля</b></p>
+                                <p class="goods__price">72 рубля</p>
                             </div>
-                
                         </div>
-                        <div class="goods__card">
-                            <img src="../images/goods_2.png" alt="товар 2" width="250" height="450" class="goods-images goods-images--second">
+                        <div class="goods__card" onclick="storeItem(this)">
+                            <img src="../images/goods_2.png" alt="товар 2" class="goods-images">
                             <div class="goods-card-text">
                                 <figcaption>Губка</figcaption>
-                                <p class="goods__price"><b>50 рублей</b></p>
+                                <p class="goods__price">50 рублей</p>
+
                             </div>
                         </div>
-                        <div class="goods__card">
-                            <img src="../images/goods_3.png" alt="товар 3" width="250" height="450" class="goods-images goods-images--third">
+                        <div class="goods__card" id="sale" onclick="storeItem(this)">
+                            <img src="../images/goods_3.png" alt="товар 3" class="goods-images">
                             <div class="goods-card-text">
                                 <figcaption>Очки для юных химиков</figcaption>
-                                <p class="goods__price"><b>149 рублей</b></p>
+                                <p style="color: #FF0000;">Скидка!</p>
+                                <div class="goods__prices">
+                                    <p class="goods__price">149 рублей</p>
+                                    <p class="goods__price--sale">50 рублей</p>
+                                </div>
+                                
                             </div>
                         </div>
+                        <div class="goods__card" onclick="storeItem(this)">
+                            <img src="../images/goods1.jpg" alt="товар 4" class="goods-images">
+                            <div class="goods-card-text">
+                                <figcaption>Ёж</figcaption>
+                                <p class="goods__price">199 рублей</p>
+
+                            </div>
+                        </div>
+                        <div class="goods__card" onclick="storeItem(this)">
+                            <img src="../images/goods2.jpg" alt="товар 5" class="goods-images">
+                            <div class="goods-card-text">
+                                <figcaption>Молоток</figcaption>
+                                <p class="goods__price">199 рублей</p>
+
+                            </div>
+                        </div>
+                        <div class="goods__card" onclick="storeItem(this)">
+                            <img src="../images/goods4.webp" alt="товар 6" class="goods-images">
+                            <div class="goods-card-text">
+                                <figcaption>Урановая чашка</figcaption>
+                                <p class="goods__price">299 рублей</p>
+                            </div>
+                        </div>
+                        <div class="goods__card" onclick="storeItem(this)">
+                            <img src="../images/goods.jpg" alt="товар 7" class="goods-images">
+                            <div class="goods-card-text">
+                                <figcaption>Электрический молоток</figcaption>
+                                <p class="goods__price">499 рублей</p>
+                            </div>
+                        </div>
+                        <script>
+                            function storeItem(element) {
+                                const currentStatusButton = document.querySelector('.goods__card-button');
+                                
+                                element.classList.toggle('goods__card--selected');
+                                
+                                // Считаем ВСЕ выделенные карточки на странице
+                                const selectedCount = document.querySelectorAll('.goods__card--selected').length;
+                                
+                                if (selectedCount >= 1) {
+                                    currentStatusButton.classList.add('goods__card-button--activate');
+                                } else {
+                                    currentStatusButton.classList.remove('goods__card-button--activate');
+                                }
+                            }
+                        </script>
                     </div>
+                    
+                    <button class="goods__card-button" onclick="buyEverySelectedItem(this)">КУПИТЬ</button>
+                    <script>
+                        function buyEverySelectedItem(elem) {
+                            const allItemsSelected = document.querySelectorAll('.goods__card--selected');
+                            allItemsSelected.forEach(element => {
+                                element.classList.remove('goods__card--selected');
+                            });
+
+                            document.querySelector('.goods__card-button').classList.remove('goods__card-button--activate');
+                        }
+                    </script>
+
                 
                 </section>
             </div>
         </main>
         <footer class="footer">
-            <p class="footer__text">&copy; 2025 Все права защищены. Контактная информаци</p>
+            <p class="footer__text">&copy; 2025 Все права защищены. Контактная информация</p>
         </footer>
     </div>
 </body>
