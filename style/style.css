@@ -5,10 +5,11 @@
  box-sizing: border-box;
 }
 body {
- font-family: Arial, sans-serif;
+ font-family: Arial, Helvetica, sans-serif;
  line-height: 1.6;
  color: var(--color-text);
- background-image: url('../gifs/background-4.gif');
+ /* background-image: url('../gifs/background12.gif');*/
+ background-image: url('../images/background.png');
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
@@ -22,11 +23,6 @@ body {
 
 }
 
-/* @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-} */
 
 /* Блок page */
 .page {
@@ -120,6 +116,7 @@ background: var(--color-grey);
  margin-bottom: var(--space-lg);
  border-radius: var(--radius);
  box-shadow: var(--shadow);
+
 }
 .profile__info:hover, .about:hover {
     background-color: radial-gradient(ellipse closest-side, var(--color-white), transparent);
@@ -172,20 +169,52 @@ background: var(--color-grey);
  color: var(--color-white);
  font-weight: bold;
  transition: transform 0.3s;
+
+ background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 .skill:hover {
- transform: translateY(-3px);
+ transform: translateY(-5px);
 }
 .skill--html {
-     background: #e34c26;
+    background: rgba(227, 76, 38, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(227, 76, 38, 0.3);
+    box-shadow: 0 8px 32px rgba(227, 76, 38, 0.1);
 }
+
+/* CSS с эффектом стекла */
 .skill--css {
- background: #264de4;
+    background: rgba(38, 77, 228, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(38, 77, 228, 0.3);
+    box-shadow: 0 8px 32px rgba(38, 77, 228, 0.1);
 }
+
+/* JS с эффектом стекла */
 .skill--js {
- background: #f0db4f;
- color: var(--color-text);
+    background: rgba(240, 219, 79, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(240, 219, 79, 0.3);
+    box-shadow: 0 8px 32px rgba(240, 219, 79, 0.1);
+    color: var(--color-text);
 }
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .skills__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill {
+        width: 200px;
+        text-align: center;
+    }
+}
+
 /* Блок projects */
 .projects__title, .news__title  {
  color: var(--color-main);
@@ -265,7 +294,7 @@ background: var(--color-grey);
  border-radius: 25px;
  font-weight: 600;
  font-size: 14px;
- box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3); 
+ box-shadow: 0 4px 15px var(--color-accent); 
  transition: all 0.3s ease; 
 
  display: flex;

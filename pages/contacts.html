@@ -47,69 +47,54 @@
                         <p id="contacts__info">Адрес: г.Москва</p>
                     </div>
                 </section>
-                <button class="contacts__button" onclick="contactModal.showModal()">Позвоните мне</button>
+                <button class="contacts__button" onclick="contactModal.showModal()">Предложка</button>
             </div>
         </main>
         <footer class="footer">
             <p class="footer__text">&copy; 2025 Все права защищены. Контактная информация</p>
         </footer>
 
-        <dialog id="contactModal">
+        <dialog id="contactModal" class="modal">
             <div class="modal-header">
-            <h2>Форма обратной связи</h2>
+                <h2>Предложка новостей!</h2>
+            </div>
+            <div class="modal-desc">
+                <p>Пришлите нам предложение своего поста и <i>возможно</i> его даже опубликуют</p>
             </div>
             <div class="modal-content">
-            <form id="feedbackForm" method="dialog">
-            <div class="form-group">
-            <label for="name">Имя <span class="required">*</span>
-            </label>
-            <input type="text" id="name" name="name" required
-            placeholder="Введите ваше имя">
-            </div>
-            <div class="form-group">
-            <label for="phone">Телефон <span class="required">*
-            </span></label>
-            <input type="tel" id="phone" name="phone" required
-            placeholder="+7 (XXX) XXX-XX-XX">
-            </div>
-            <div class="form-group">
-            <label for="email">Электронная почта <span
-            class="required">*</span></label>
-            <input type="email" id="email" name="email" required
-            placeholder="example@mail.ru">
-            </div>
-            <div class="form-group">
-            <label for="category">Категория обращения <span
-            class="required">*</span></label>
-            <select id="category" name="category" required>
-            <option value="">Выберите категорию</option>
-            <option value="technical">Техническая
-            поддержка</option>
-            <option value="commercial">Коммерческое
-            предложение</option>
-            <option
-            value="cooperation">Сотрудничество</option>
-            <option value="complaint">Жалоба</option>
-            <option value="suggestion">Предложение</option>
-            <option value="other">Другое</option>
-            </select>
-            </div>
-            <div class="form-group">
-            <label for="message">Текст обращения <span
-            class="required">*</span></label>
-            <textarea id="message" name="message" required
-            placeholder="Опишите вашу проблему или вопрос..."></textarea>
-            </div>
-            <div class="modal-actions">
-            <!-- Кнопка отмены с автоматическим закрытием через
-            form method="dialog" -->
-            <button type="submit" class="btn btn-
-            secondary">Отмена</button>
-            <!-- Кнопка отправки с обработкой через JavaScript -->
-            <button type="button" class="btn btn-primary"
-            onclick="submitForm()">Отправить</button>
-            </div>
-            </form>
+                <span class="exit-button">&times;</span>
+                <form action="" method="get" class="contacts-modal-form">
+                    <div class="form-text">
+                        <label for="name">Юзернейм</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-text">
+                        <label for="phone">Телефон</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                    <div class="form-text">
+                        <label for="email">Электронная почта</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="form-text">
+                        <label for="category">Категория обращения</label>
+                        <select name="category" id="category">
+                            <option value="">Выбрать категорию</option>
+                            <option value="comedy">Комедия</option>
+                            <option value="tragedy">Трагедия</option>
+                            <option value="comedragy">Трагикомедия!</option>
+                            <option value="absurd">Полный сюр</option>
+                            <option value="science">Научные открытия</option>
+                        </select>
+                    </div>
+                    <div class="form-text">
+                        <label for="message">Текст вашего поста</label>
+                        <textarea name="message" id="message" required placeholder="Porsche Macan GTS отправится в космос на борту Shenzhou-21..."> </textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit"  onclick="submitForm()">Отправить</button> 
+                    </div>
+                </form>
             </div>
         </dialog>
 
