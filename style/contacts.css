@@ -1,13 +1,27 @@
 @import url("variables.css");
+input, textarea {
+width:50%;
+}
+textarea {
+    padding: 15px 10px;
+    border: 2px solid var(--color-light);
+    border-radius: var(--radius);
+}
+select,  input {
+    padding: 5px;
+    border: 2px solid var(--color-light);
+    border-radius: var(--radius);
+}
+
+.modal__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .modal {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center; */
-    /* position: fixed; */
-    text-align: center;
-     position: fixed;
+    position: fixed;
     margin: auto;
     top: 0;
     right: 0;
@@ -18,7 +32,13 @@
 
     border: none;
     border-radius: var(--radius);
-    padding: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    width: 600px;
+
+    /* backdrop-filter: blur(3px); */
 }
 .modal::backdrop {
     background: rgba(0, 0, 0, 0.5);
@@ -26,4 +46,46 @@
 }
 .modal-content {
     padding: 30px;
+}
+.exit-button {
+    /* margin-left: auto; */
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: auto; */
+}
+.form-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.submit-button {
+    border: none;
+    padding: var(--radius);
+    border-radius: var(--radius);
+    transition: transform 0.3s ease;
+}
+.submit-button:hover {
+    box-shadow: var(--shadow);
+    transform: scale(1.1);
+}
+.submit-button--activate {
+    color: var(--color-button-activate-text);
+    background: var(--color-button-activate-background);
+    font-weight: bold;
+}
+.req {
+    color: var(--color-price-sale);
+    font-weight: bold;
 }
