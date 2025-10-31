@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preload" href="fonts/myfont-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Главная - Портфолио</title>
+</head>
+<body>
+
+    <div class="page">
+
+        <header class="header">
+            <h1 class="header__title">Главная</h1>
+            <div class="header__Theme-button" onclick="toggleTheme()">
+                <img src="icons/brightness.png" alt="свтл." class="theme-icons">
+            </div>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link" href="index.html">Главная
+                    </a>
+                </li>
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link" href="pages/news.html">Новости
+                    </a>
+                </li><li class="nav__item nav__item--activate">
+                    <a class="nav__link" href="pages/practices.html">Практики
+                    </a>
+                </li><li class="nav__item nav__item--activate">
+                    <a class="nav__link" href="pages/goods.html">Товары
+                    </a>
+                </li>
+                <li class="nav__item nav__item--activate">
+                    <a class="nav__link" href="pages/contacts.html">Контакты
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <main class="main">
+            <section class="profile">
+                <img class="profile__photo" src="images/photo.jpg" alt="Фото автора">
+                <div class="profile__card">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Ходжакулыев Ровшан Рашидович</h2>
+                        <p class="profile__group">ЭФБО-05-24</p>
+                    
+                    </div>
+                    <section class="about">
+                        <h2 class="about__title">Обо мне</h2>
+                        <div class="about__content">
+                            <p class="about__text">
+                                Броске
+                            </p>
+                        </div>
+                        </section>
+                </div>
+            
+        </section>
+
+            
+
+            <section class="skills">
+                <h2 class="skills__tilte">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--html">
+                        <span class="skill__name">HTML</span>
+                    </div>
+                    <div class="skill skill--css">
+                        <span class="skill__name">CSS</span>
+                    </div>
+                    <div class="skill skill--js">
+                        <span class="skill__name">JS</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects">
+                <h2 class="projects__title">Проекты</h2>
+                <div class="projects__grid">
+                    <div class="projects__card">
+                        <h3 class="projects-card__title">Личный сайт</h3>
+                        <p class="projects-card__desk">Сайт-порфтолио</p>
+                    </div>
+                    <div class="projects__card">
+                        <h3 class="projects-card__title">TODO приложение</h3>
+                        <p class="projects-card__desk">Приложение для задач</p>
+                    </div>
+                </div>
+            </section>
+
+        
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Все права защищены. Контактная информация</p>
+        </footer>
+
+
+        
+
+    </div>
+    <script src="../js/theme.js" defer></script>
+
+</body>
+</html>
