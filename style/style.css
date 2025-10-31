@@ -23,6 +23,25 @@ body {
 
 }
 
+.dark-theme {
+    background-image: url('../images/i.webp');
+    color: var(--color-light);
+
+    .header, .nav__link, .skill__name, footer, .goods__title, .news-item__text, .section__title, .contacts__title  {
+        color: var(--color-light);
+    }
+    .goods-card-text {
+        color: var(--color-black);
+    }
+    .header, .footer {
+        background-color: var(--color-button-activate-background);
+    }
+    .nav__link:hover {
+        background-color: var(--color-button-activate-background);
+    }
+
+}
+
 /* Блок page */
 .page {
  max-width: 1200px;
@@ -48,11 +67,29 @@ body {
  background: var(--color-main);
  color: var(--color-text);
  padding: var(--space-lg);
- text-align: center;
+ /* text-align: center; */
+ display: flex;
+ flex-direction: row;
+ /* justify-content:space-between; */
+ align-items: center;
 }
 .header__title {
- font-size: 2rem;
+ font-size: 3rem;
+ margin: 0 auto;
+ flex-shrink: 0;
 }
+
+.theme-icons {
+    width: 20px;
+    height: auto;
+    /* margin-left: auto; */
+    /* align-self: flex-end; */
+    transition: all 0.1s;
+}
+.header__Theme-button:hover {
+    transform: scale(1.1);
+}
+
 /* Блок nav */
 .nav {
  background: transparent;

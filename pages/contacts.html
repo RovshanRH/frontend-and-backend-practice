@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/contacts.css">
-    <script src="../js/contacts.js"></script>
     <title>Контакты</title>
 </head>
 <body>
     <div class="page">
         <header class="header">
             <h1 class="header__title">Контакты</h1>
+            <div class="header__Theme-button">
+                <img src="../icons/brightness.png" alt="свтл." class="theme-icons">
+            </div>
         </header>
         <nav class="nav">
             <ul class="nav__list">
@@ -55,17 +57,19 @@
         </footer>
 
         <dialog id="contactModal" class="modal">
-            <span class="exit-button">&times;</span>
-
-            <div class="modal__info">
-                <div class="modal-header">
-                    <h2>Предложка</h2>
-                </div>
-                <div class="modal-desc">
-                    <p>Пришлите нам текст поста и <i>вообще нет</i>, его даже не опубликуют</p>
-                </div>
-            </div>
+            
             <div class="modal-content">
+                <span class="exit-button">&times;</span>
+
+                <div class="modal__info">
+                    <div class="modal-header">
+                        <h2>Предложка</h2>
+                    </div>
+                    <div class="modal-desc">
+                        <p>Пришлите нам текст поста и <i>вообще нет</i>, его даже не опубликуют</p>
+                    </div>
+                </div>
+                
                 <form action="" method="get" class="contacts-modal-form">
                     <div class="form-text">
                         <label for="name">Юзернейм <span class="req">*</span></label>
@@ -102,6 +106,8 @@
         </dialog>
 
     </div>
-    
+    <script src="../js/contacts.js"></script>
+    <script src="../js/theme.js" defer></script>
+
 </body>
 </html>

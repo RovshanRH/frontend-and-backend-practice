@@ -1,4 +1,5 @@
 @import url("variables.css");
+
 input, textarea {
 width:50%;
 }
@@ -12,12 +13,12 @@ select,  input {
     border: 2px solid var(--color-light);
     border-radius: var(--radius);
 }
-
 .modal__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .modal {
@@ -45,13 +46,25 @@ select,  input {
     backdrop-filter: blur(3px);
 }
 .modal-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
     padding: 30px;
 }
 .exit-button {
-    /* margin-left: auto; */
-    display: flex;
-    justify-content: flex-end;
-    /* margin-top: auto; */
+    margin-left: auto;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    margin-top: auto;
+    /* align-self: flex-end; */
+    background-color: var(--color-light);
+    padding: 0 var(--radius);
+    border-radius: 100%;
+}
+.exit-button:hover {
+    font-weight: bold;
+    background-color: var(--color-light-darker);
 }
 .form-text {
     display: flex;

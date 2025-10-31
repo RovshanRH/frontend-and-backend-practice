@@ -3,6 +3,8 @@
  --color-accent: rgb(255, 160, 122);
  --color-accent-20: rgb(255, 215, 0, 0.3);
  --color-light: #ecf0f1;
+ --color-light-darker: #e0e4e6;
+
  /* --color-light-20: rgba(236, 240, 241, 1); */
  --color-dark: #E9967A;
  --color-dark-80: rgb(233, 150, 122, 0.8);

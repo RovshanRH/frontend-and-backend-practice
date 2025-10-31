@@ -8,7 +8,12 @@
 </head>
 <body>
     <div class="page">
-        <header class="header"><h1 class="header__title">Товары</h1></header>
+        <header class="header">
+            <h1 class="header__title">Товары</h1>
+            <div class="header__Theme-button" onclick="toggleTheme()">
+                <img src="../icons/brightness.png" alt="свтл." class="theme-icons">
+            </div>
+        </header>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item nav__item--activate">
@@ -140,5 +145,7 @@
             <p class="footer__text">&copy; 2025 Все права защищены. Контактная информация</p>
         </footer>
     </div>
+    <script src="../js/theme.js" defer></script>
+
 </body>
 </html>
