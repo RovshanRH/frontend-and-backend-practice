@@ -424,10 +424,11 @@ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
 .goods__cards {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
+    margin-bottom: 30px;
     grid-area: "goods-cards";
 }
 .goods__card {
@@ -447,6 +448,7 @@ align-items: center;
  gap: 20px;
  grid-area: "goods-card";
 }
+
 .goods__card--selected {
     border: 2px solid var(--color-selected-goods-card);
 }
@@ -537,6 +539,11 @@ align-items: center;
 
  .projects__grid {
  grid-template-columns: 1fr;
+ }
+
+ .goods__card {
+    width: 100%;
+    margin: 0 10px;
  }
 }
 
